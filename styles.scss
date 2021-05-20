@@ -1,0 +1,21 @@
+$paddingLeft: 10px;
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+
+    .input {
+        width: 50%;
+    }
+
+    .iconSearch {
+        padding-left: $paddingLeft;
+        cursor: pointer;
+    }
+
+    .iconLoop {
+        padding-left: $paddingLeft;
+    }
+}

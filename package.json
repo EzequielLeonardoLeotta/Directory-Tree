@@ -5,12 +5,17 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "yarn build && next start"
+    "start": "yarn build && next start",
+    "scss": "node-sass . --watch --recursive --output css"
   },
   "dependencies": {
-    "next": "9.3.5",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "yarn": "^1.22.10"
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "sass": "latest",
+    "yarn": "latest",
+    "axios": "latest"
   }
 }
