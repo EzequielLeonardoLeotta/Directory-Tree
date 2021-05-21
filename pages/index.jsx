@@ -4,6 +4,7 @@ import TextField from '@material-ui/core/TextField'
 import SearchIcon from '@material-ui/icons/Search'
 import LoopRoundedIcon from '@material-ui/icons/LoopRounded'
 import axios from 'axios'
+import Tree from '@naisutech/react-tree'
 
 export default function DirectoryTree() {
   const [url, setUrl] = useState(null)
@@ -13,18 +14,18 @@ export default function DirectoryTree() {
   const handleOnClick = async () => {
     if (url) {
       setSearching(true)
-      axios
+      try {
+        await axios
         .get(url)
-        .then(res => {
-          res.status==200 && setDirectories(res.data)
+        .then((res) => {
+          res.status == 200 && setDirectories(res.data)
         })
-        .catch(
-          alert("Ocurrió un error, intente nuevamente")
-        )
-        .finally(
-          setSearching(false)
-        )
-    } else alert("Ingrese una URL");
+      } catch (error) {
+        alert('Ocurrió un error, intente nuevamente')
+      } finally {
+        setSearching(false)
+      }
+    } else alert('Ingrese una URL')
   }
 
   return (
@@ -40,10 +41,23 @@ export default function DirectoryTree() {
             onChange={(e) => setUrl(e.target.value)}
           />
         </div>
-        <div className={!searching ? "iconSearch" : "iconLoop"} onClick={() => handleOnClick()}>
+        <div
+          className={!searching ? 'iconSearch' : 'iconLoop'}
+          onClick={() => handleOnClick()}
+        >
           {!searching ? <SearchIcon /> : <LoopRoundedIcon />}
         </div>
       </div>
+      {directories ? (
+        <div className="tree">
+          <Tree
+            nodes={directories}
+            showEmptyItems
+            size="half"
+            theme={'light'}
+          />
+        </div>
+      ) : null}
     </>
   )
 }

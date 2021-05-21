@@ -96,17 +96,6 @@
   dependencies:
     "@babel/runtime" "^7.4.4"
 
-"@material-ui/lab@latest":
-  version "4.0.0-alpha.58"
-  resolved "https://registry.yarnpkg.com/@material-ui/lab/-/lab-4.0.0-alpha.58.tgz#c7ebb66f49863c5acbb20817163737caa299fafc"
-  integrity sha512-GKHlJqLxUeHH3L3dGQ48ZavYrqGOTXkFkiEiuYMAnAvXAZP4rhMIqeHOPXSUQan4Bd8QnafDcpovOSLnadDmKw==
-  dependencies:
-    "@babel/runtime" "^7.4.4"
-    "@material-ui/utils" "^4.11.2"
-    clsx "^1.0.4"
-    prop-types "^15.7.2"
-    react-is "^16.8.0 || ^17.0.0"
-
 "@material-ui/styles@^4.11.4":
   version "4.11.4"
   resolved "https://registry.yarnpkg.com/@material-ui/styles/-/styles-4.11.4.tgz#eb9dfccfcc2d208243d986457dff025497afa00d"
@@ -152,6 +141,11 @@
     "@babel/runtime" "^7.4.4"
     prop-types "^15.7.2"
     react-is "^16.8.0 || ^17.0.0"
+
+"@naisutech/react-tree@latest":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@naisutech/react-tree/-/react-tree-0.4.2.tgz#25a88719f355be19325bfd22529320a3e81f01a9"
+  integrity sha512-9rU93lxRHRvTRQH58tFqFjJEEVCfvK7nnp0TKdSEhKoi2JJIYIU3ODbKzeIEZlXNwVPEZEWcSYPjuz6DEKSKeA==
 
 "@next/env@10.2.2":
   version "10.2.2"
